@@ -1,4 +1,4 @@
-# takes 4.8s with ruby 2.1.0p0
+# runtime 4.8s with ruby 2.1.0p0
 primes = []
 x = 1
 begin

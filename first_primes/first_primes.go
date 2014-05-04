@@ -1,20 +1,20 @@
-/*Runs in 0.597s in Go 1.2*/
+/*Runtime 0.6s with Go 1.2*/
 package main
 import "fmt"
 
 func main() {
   var primes [10000]int
-  var testNumber int = 2
-  for length := 0; length < 10000; testNumber++ {
-    divisable := true
+  var x int = 2
+  for length := 0; length < 10000; x++ {
+    isPrime := true
     for i := 0; i < length; i++ {
-      if testNumber % primes[i] == 0 {
-        divisable = false
+      if x % primes[i] == 0 {
+        isPrime = false
         break
       }
     }
-    if divisable == true {
-      primes[length] = testNumber
+    if isPrime {
+      primes[length] = x
       length = length + 1
     }
   }
